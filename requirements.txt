@@ -1,0 +1,5 @@
+anthropic@latest
+dotenv@latest
+fastapi@latest
+requests@latest
+uvicorn@latest
