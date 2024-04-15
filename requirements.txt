@@ -1,5 +1,3 @@
-anthropic
-dotenv
-fastapi
-requests
-uvicorn
+anthropic==0.25.1
+python-dotenv
+fastapi[all]
