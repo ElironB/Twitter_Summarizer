@@ -75,6 +75,3 @@ async def generate_summary_endpoint(screen_name: str):
     tweets_data = get_user_tweets(screen_name)
     summary = generate_summary(tweets_data, screen_name)
     return {"screen_name": screen_name, "summary": summary}
-
-if __name__ == "__main__":
-    uvicorn.run(main, host="0.0.0.0", port=8000)
