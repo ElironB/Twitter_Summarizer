@@ -76,6 +76,6 @@ async def generate_summary_endpoint(screen_name: str):
     summary = generate_summary(tweets_data, screen_name)
     return {"summary": summary}
 
-@app.get("/ping")
+@main.get("/ping")
 async def ping():
     return {"message": "OK"}
