@@ -32,9 +32,8 @@ def get_user_tweets(screen_name):
     else:
         description = data['data']['user']['result']['timeline_v2']['timeline']['instructions'][1]    
     return f"Tweets of {screen_name}: ", get_full_texts(description), f"Pinned Tweets of {screen_name}:", pinned_tweet
-index = 1  # Initialize index counter
 
-index = 1  # Initialize index counter
+index = 1
 
 def get_full_texts(data):
     global index  # Use the global index variable
@@ -47,8 +46,8 @@ def get_full_texts(data):
 
         if isinstance(data, dict):
             if 'full_text' in data:
-                full_texts.append(f"{index}: {data['full_text']}")  # Append tweet with index
-                index += 1  # Increment index counter only when a tweet is appended
+                full_texts.append(f"{index}: {data['full_text']}") 
+                index += 1 
             stack.extend([(v,) for v in data.values()])
         elif isinstance(data, list):
             stack.extend([(item,) for item in data])
